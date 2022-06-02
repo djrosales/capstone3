@@ -1,6 +1,6 @@
 
 export const storeProducts = [
-  ///const data = [
+  //const data = [
     {
       id: 1,
       name: "Guinness",

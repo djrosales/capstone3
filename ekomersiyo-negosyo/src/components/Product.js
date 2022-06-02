@@ -7,23 +7,45 @@ export default function Product({productProp}){
   return(
 
     <>
-          <CardGroup className=""> 
-            <Col xs={12} md={4} lg={4}>
-            
-            <Card className='text-justify mx-3'>
-              <Card.Img variant="top" className='' src={img} />
-              <Card.Body>
-                <Card.Title> {name }</Card.Title>
-                <Card.Text>
-                </Card.Text>
-                <Card.Subtitle>Price:</Card.Subtitle>
-                <Card.Text>Php  {(price)} </Card.Text>
-              </Card.Body>
-              <Button variant="primary">Details</Button>
-          </Card>
-          </Col>  
-          </CardGroup> 
+
+    {/* <Card className="">
+    <Card.Body>
+      <Card.Title>{ name } </Card.Title>
+
+      <Card.Subtitle>Description:</Card.Subtitle>
+      <Card.Text> { description } </Card.Text>
+
+      <Card.Subtitle>Price:</Card.Subtitle>
+      <Card.Text>Php  {(price)} </Card.Text> */}
+
+      {/* <Button variant="primary" as={ Link } to={`/courses/${_id}`}>Details</Button> */}
+    {/*   <Button variant="primary">Details</Button>
+    </Card.Body>
+  </Card> */}
+
+
+{/*  
+ <CardGroup className=""> 
+  <Col xs={12} md={4} lg={4}>
+  
+  <Card className='text-justify mx-3'>
+    <Card.Img variant="top" className='' src={img} />
+    <Card.Body>
+      <Card.Title> {name }</Card.Title>
+      <Card.Text>
+      </Card.Text>
+      <Card.Subtitle>Price:</Card.Subtitle>
+      <Card.Text>Php  {(price)} </Card.Text>
+    </Card.Body>
+    <Button variant="primary">Details</Button>
+ </Card>
+ </Col>  
+ </CardGroup> 
+ */}
+
+
+
   </>
   )
-} const ProductWrapper =styled.div``;
-//
+}
+// const ProductWrapper =styled.div``

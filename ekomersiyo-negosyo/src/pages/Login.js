@@ -9,7 +9,7 @@ export default function Login() {
 	const [ email, setEmail ] = useState('');
 	const [ password, setPassword ] = useState('');
 
-	//button..
+	//button
 	const [ isActive, setIsActive ] = useState(true);
 
 	useEffect(() => {
@@ -22,6 +22,10 @@ export default function Login() {
 
 	function authentication(e) {
 		e.preventDefault();
+
+		//Set the email of the authenticated user in the localStorage
+		//localStorage.setItem('propertyName', value)
+		//setItem to store information in localStorage
 		localStorage.setItem('email', email);
 
 

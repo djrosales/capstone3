@@ -12,6 +12,7 @@ import { ProductProvider} from './context';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
+// document.body.style.backgroundColor ="#F1f5f8";
 
 
 function App() {
@@ -19,13 +20,13 @@ function App() {
     <ProductProvider>
     <BrowserRouter>
       <AppNavbar />
-       {/* <Container>  */}
+      {/* <Container> */}
         <Routes>
           <Route>
             <Route path="/" element={<Home/>}/>
             <Route path="/products" element={<ProductCatalog/>}/>
-             <Route path="/details" element= {<Details/>}/>
-            <Route path="/cart" element={<Cart/>}/>
+            {/* <Route path="/details" element= {<Details/>}/>
+            <Route path="/cart" element={<Cart/>}/> */}
             <Route path="/register" element={<Registration />}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/logout" element={<Logout/>}/>

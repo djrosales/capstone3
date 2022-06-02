@@ -1,13 +1,13 @@
-
+import Banner from "../components/Banner";
+import Highlights from "../components/Highlights";
 
 export default function Home(){
     return(
-        <><h1>
-            hello from Home
-        </h1>
+        <>
+            {/* <Highlights /> */}
+            <h1>hello from home page</h1>
          
         
         </>
     )
 }
-//
