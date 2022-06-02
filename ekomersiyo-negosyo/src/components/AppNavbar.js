@@ -15,7 +15,7 @@ export default function AppNavbar() {
 		<Navbar bg="success" expand="sm" variant="dark" className="px-sm-4 ">
 			<Nav.Link as ={Link} to="/"><img src={logo} alt="logo" className='navbar-logo'/></Nav.Link>
 			<ul className='navbar-nav align-items-center'>
-				<li className='nav-item m-auto'>
+				<li className='text-brand m-auto'>
 				<Nav.Link as ={Link} to="/">eKomersiyoNegosyo</Nav.Link>
 				</li>
 			</ul>

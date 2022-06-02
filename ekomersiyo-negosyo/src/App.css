@@ -100,12 +100,13 @@ body{
 .text-title{
   font-family:'Permanent Marker', cursive;
   letter-spacing: 0.3rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
-.text-blue{
-  color:var(--main);
+.text-brand{
+  font-family:'Permanent Marker', cursive;
+  color:var(--main) !important;
 }
 
 .text-yellow{
-  color:var(--mainYellow)
+  color:var(--main)
 }
