@@ -15,7 +15,7 @@ export default function Register() {
 	const [ isActive, setIsActive ] = useState(true);
 
 	useEffect(() => {
-		//Validation to enable submit button
+		//Validation to enable submit button..
 		if((email !== '' && password !== '' && verifyPassword !== '') && (password === verifyPassword)){
 			setIsActive(true);
 		}else {

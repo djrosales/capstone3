@@ -19,7 +19,7 @@ function App() {
     <ProductProvider>
     <BrowserRouter>
       <AppNavbar />
-       <Container> 
+       {/* <Container>  */}
         <Routes>
           <Route>
             <Route path="/" element={<Home/>}/>
@@ -33,7 +33,7 @@ function App() {
 
           </Route>
         </Routes> 
-        </Container> 
+        {/* </Container>  */}
     </BrowserRouter>
     </ProductProvider>
     

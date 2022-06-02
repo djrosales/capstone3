@@ -5,3 +5,4 @@ export default function Details(){
         <h1>hello from Details</h1>
     )
 }
+//

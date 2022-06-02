@@ -9,7 +9,7 @@ export default function Login() {
 	const [ email, setEmail ] = useState('');
 	const [ password, setPassword ] = useState('');
 
-	//button
+	//button..
 	const [ isActive, setIsActive ] = useState(true);
 
 	useEffect(() => {
