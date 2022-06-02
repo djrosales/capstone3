@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ body { 
+  justify-content: center;
+  align-items: center;
+} 
+
+.form-container {
+  width: 400px;
+  background-color: black;
+  margin: auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.white-text{
+  color:white;
+}
+
+Form {
+   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-field {
+  width: 300px;
+  display: flex;
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+span {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: red;
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  background: #f2f2f2;
+}
+
+.align{
+  text-align: center;
+}
+#btn{
+ /* background: rgb(252, 4, 252); */
+  background:#FA7E55; 
+  color:white;
+}
+.navbar-logo{
+  width:30px;
+}
+
+
+:root{
+  --main:#FA7E55;
+  --mainYellow:#ffa400;
+  --ligthGray:#F1f5f8;
+
+}
+body{
+  
+  background:var(--ligthGray) !important;  
+  
+
+}
+.text-title{
+  font-family:'Permanent Marker', cursive;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+.text-blue{
+  color:var(--main);
+}
+.text-yellow{
+  color:var(--mainYellow);
+}
+
