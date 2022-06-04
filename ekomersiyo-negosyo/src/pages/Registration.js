@@ -58,7 +58,7 @@ export default function Register() {
 				{/* <Form.Text className="text-muted">
 					We'll never share your email with anyone else.
 				</Form.Text> */}
-                {<span id="first-name-error">Please enter an email</span> }
+                {<span id="error">Please enter an email</span> }
 			</Form.Group>
 
 			<Form.Group>
@@ -73,7 +73,7 @@ export default function Register() {
 				    value={password}
 				    onChange={e => setPassword(e.target.value)}
 				    />
-					{ <span id="last-name-error">Please enter a password</span> }
+					{ <span id="error">Please enter a password</span> }
 			</Form.Group>
 
 			<Form.Group>
@@ -88,7 +88,7 @@ export default function Register() {
 				    value={verifyPassword}
 				    onChange={e => setVerifyPassword(e.target.value)}
 				    />
-					 {<span id="email-error">Please verify your password</span> }
+					 {<span id="error">Please verify your password</span> }
 			</Form.Group>
               
 			{isActive ?

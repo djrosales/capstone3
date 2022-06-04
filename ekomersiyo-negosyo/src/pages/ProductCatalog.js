@@ -7,36 +7,27 @@ import { Link } from 'react-router-dom';
 
 import Product from '../components/Product';
 import Title from '../Title';
-import data from '../components/data';
-import {storeProducts} from '../components/data';
 import {ProductConsumer} from '../context';
 
-export default function CourseCard({courseProp}) {
-
-/* 	const { _id, name, description, price } = courseProp;
- */
-   /*  const state={
-        products:storeProducts
-    }; */
-    const products =data.map(product =>{
+export default function CourseCard() {
+   /*  const products =data.map(product =>{
       return <Product productProp={product}/>;
-    })
+    }) */
 
 	return(
         <>
          <div className='py-2'>
             <Title prodName="our " label="products"/>
-            {/* <div className='row'>
+             <div className='main_content'>
             <ProductConsumer>
                  {value => {
-                    return value
+                    return value.products.map(product => {
+                      return <Product key={product.id} productProp={product}/>;
+                    })
                 }} 
             </ProductConsumer>
-            </div> */}
+            </div> 
         </div>
-        {/* <Product productProp={storeProducts[0]}/>  */}
-        {products}
-        
        
 
        {/*  
