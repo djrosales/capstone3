@@ -14,7 +14,7 @@
   align-items: center;
 } 
 .nav-border{
-   border-top-right-radius: 90px; 
+   border-top-right-radius: 50px; 
 
 }
 
@@ -93,8 +93,8 @@ input {
 :root{
   --main:#FA7E55;
   --lightGreen:#90ee90;
-  --mainWhite: #f3f3f3;
-  --mainDark:#232528;
+  --mainBlue: #00008B;
+  --lightBlue:#ADD8E6;
   --mainYellow:#ffa400;
   --ligthGray:#F1f5f8;
 
