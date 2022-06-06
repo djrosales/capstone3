@@ -44,6 +44,7 @@ export default function Details(){
                                     </Link>
                                         <BackButton cart disabled={inCart ? true:false} onClick={() => {
                                             value.addToCart(id);
+                                            value.openModal(id);
                                         }}>
                                             {inCart ? "inCart" :"Add to Cart" }
                                         </BackButton>

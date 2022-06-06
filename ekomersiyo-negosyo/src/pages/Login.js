@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import { Form, Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
@@ -36,7 +35,7 @@ export default function Login() {
 		Swal.fire({
 			title: 'Yay!',
 			icon: 'success',
-			text: `${email} has been verified! Welcome!`
+			text: `You are now login. Enjoy shopping!`
 		})
 	}
 

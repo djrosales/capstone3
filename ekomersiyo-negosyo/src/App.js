@@ -8,35 +8,45 @@ import Registration from './pages/Registration';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import PageNotFound from './pages/PageNotFound';
+import { UserProvider } from './UserContext';
 import { ProductProvider} from './context';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { useState } from 'react';
+/* import { Container } from 'react-bootstrap'; */
 
-// document.body.style.backgroundColor ="#F1f5f8";
+/* const [user, setUser] = useState({
+  email:localStorage.getItem('email')
 
+})
+const unsetUser = () =>{
+  localStorage.clear();
+}
+ */
 
 function App() {
   return (
+  //  <UserProvider value = {{ user, setUser, unsetUser}}>
+ <UserProvider>
     <ProductProvider>
-    <BrowserRouter>
-      <AppNavbar />
-      {/* <Container> */}
-        <Routes>
-          <Route>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/products" element={<ProductCatalog/>}/>
-            <Route path="/details" element= {<Details/>}/>
-            <Route path="/cart" element={<Cart/>}/>
-            <Route path="/register" element={<Registration />}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/logout" element={<Logout/>}/>
-            <Route path='*' element={<PageNotFound/>}/>
-
-          </Route>
-        </Routes> 
-        {/* </Container>  */}
-    </BrowserRouter>
+      <BrowserRouter>
+        <AppNavbar />
+        {/* <Container> */}
+          <Routes>
+            <Route>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<ProductCatalog />} />
+              <Route path="/details" element={<Details />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/register" element={<Registration />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/logout" element={<Logout />} />
+              <Route path='*' element={<PageNotFound />} />
+            </Route>
+          </Routes>
+        {/* </Container> */}
+      </BrowserRouter>
     </ProductProvider>
+    </UserProvider>
     
   );
 }

@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom';
 
 
 import Product from '../components/Product';
-import Title from '../Title';
+import Title from '../components/Title';
 import {ProductConsumer} from '../context';
+import Modal from '../components/Modal';
 
-export default function CourseCard() {
+export default function ProductCatalog() {
    /*  const products =data.map(product =>{
       return <Product productProp={product}/>;
     }) */
@@ -26,147 +27,18 @@ export default function CourseCard() {
                     })
                 }} 
             </ProductConsumer>
-            </div> 
+            </div>
+            <Modal /> 
         </div>
        
 
-       {/*  
-        <CardGroup>
-  <Card className='mx-3'>
-    <Card.Img variant="top" className='w-500' src="../img/cafe royal.jpg" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  
-  <Card className='mx-3'>
-    <Card.Img variant="top" src="/img/cameron beer.jpg" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card className='mx-3'>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card className='mx-3'>
-    <Card.Img variant="top" src="holder.js/500px500" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-</CardGroup>
-<br/> <br/>
-<CardGroup>
-  <Card className='mx-3'>
-    <Card.Img variant="top" src="/img/cafe royal.jpg" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card className='mx-3'>
-    <Card.Img variant="top" src="/img/cameron beer.jpg" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card className='mx-3'>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card className='mx-3'>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-</CardGroup> */}
+       
         </>
 
-		/* <Card className="">
-			<Card.Body>
-				<Card.Title>cxc </Card.Title>
+		
 
-				<Card.Subtitle>Description:</Card.Subtitle>
-				<Card.Text>fd</Card.Text>
 
-				<Card.Subtitle>Price:</Card.Subtitle>
-				<Card.Text>Php </Card.Text>
-
-			
-				<Button variant="primary">Details</Button>
-
-				
-				
-				
-			</Card.Body>
-		</Card>
- */
-
+    //--------------
 
 		)
 }
