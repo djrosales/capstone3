@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import AppNavbar from './components/AppNavbar';
 import Home from './pages/Home';
@@ -11,7 +12,9 @@ import PageNotFound from './pages/PageNotFound';
 import { UserProvider } from './UserContext';
 import { ProductProvider} from './context';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import { useState } from 'react';
+import AdminView from './components/AdminView';
+import SpecificProduct from './pages/SpecificProduct';
+
 /* import { Container } from 'react-bootstrap'; */
 
 /* const [user, setUser] = useState({
@@ -24,9 +27,25 @@ const unsetUser = () =>{
  */
 
 function App() {
+
+  /* const [user, setUser] = useState({
+    email:localStorage.getItem('email')
+  
+  }) */
+  const [ user, setUser ] = useState({
+    accessToken: localStorage.getItem('accessToken'),
+    isAdmin: localStorage.getItem('isAdmin') ==='true'
+})
+
+
+  const unsetUser = () =>{
+    localStorage.clear();
+  }
+
+
   return (
-  //  <UserProvider value = {{ user, setUser, unsetUser}}>
- <UserProvider>
+  <UserProvider value = {{ user, setUser, unsetUser}}>
+{/*   <UserProvider> */}
     <ProductProvider>
       <BrowserRouter>
         <AppNavbar />
@@ -40,6 +59,7 @@ function App() {
               <Route path="/register" element={<Registration />} />
               <Route path="/login" element={<Login />} />
               <Route path="/logout" element={<Logout />} />
+              <Route path="/adminView" element={<AdminView />} />
               <Route path='*' element={<PageNotFound />} />
             </Route>
           </Routes>

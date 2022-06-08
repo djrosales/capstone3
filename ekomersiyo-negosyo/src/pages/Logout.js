@@ -10,8 +10,8 @@ export default function Logout() {
 
 	useEffect(() => {
 		setUser({
-			email: null 
-			// accessToken: null
+			// email: null 
+		 accessToken: null
 		})
 	}, [])
 

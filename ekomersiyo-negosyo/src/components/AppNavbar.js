@@ -1,17 +1,19 @@
-import { useState } from 'react';
+import { useState, useContext} from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import UserContext from '../UserContext';
 import { Component } from 'react';
 import logo from '../logo.png';
 import {ButtonCart, ButtonSign} from './Button';
 
 
 export default function AppNavbar() {
-	const [ user, setUser ] = useState(localStorage.getItem('email'))
-	console.log(user)
+ const { user } = useContext(UserContext);
+/* 	const [ user, setUser ] = useState(localStorage.getItem('email'))*/
+	// console.log(user) 
 
 	return( 
-		<>
+	
 		<Navbar bg="dark" expand="sm" variant="dark" className="nav-border px-sm-4">
 			<Nav.Link as ={Link} to="/"><img src={logo} alt="logo" className='navbar-logo'/></Nav.Link>
 			<ul className='navbar-nav align-items-center'>
@@ -34,20 +36,22 @@ export default function AppNavbar() {
 						</Nav.Link>
 					
 
-					{/* {(user !== null) ?
+						{(user.accessToken !== null) ?
 						<Nav.Link as={Link} to="/logout">Logout</Nav.Link>
 
 						:
-						<> */}
-							{/* <Nav.Link as={Link} to="/login" className='text-brand'>Login</Nav.Link> */}
-							<Nav.Link as={Link} to="/register" className='text-brand'>
+						<> 
+						<Nav.Link as={Link} to="/register" className='text-brand'>
 								<ButtonSign>&nbsp;SIGNUP&nbsp; </ButtonSign></Nav.Link>	
+
+								</>
+						}
 				</Nav>
 			</Navbar.Collapse>
 		
 			
 		</Navbar>
-		</>
+	
 
 		)
 }

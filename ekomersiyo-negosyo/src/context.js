@@ -192,10 +192,14 @@ class ProductProvider extends Component{
 
 
 const ProductConsumer = ProductContext.Consumer;
-const UserContext = ProductContext.User;
+// const UserContext = ProductContext.User;
 
 
-export{ProductProvider, ProductConsumer, UserContext};
+export{ProductProvider, ProductConsumer};
+// export{ProductProvider, ProductConsumer, UserContext};
+
+
+
 //----
 
 /* 

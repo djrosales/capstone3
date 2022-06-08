@@ -1,12 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import { NavLink } from "react-router-dom";
+import UserContext from '../UserContext';
+import { Navigate, useNavigate } from 'react-router-dom';
 import React from 'react';
 //import './App.css';
 
-export default function Register() {
+export default function Registration() {
+	const navigate = useNavigate();
+	const { user, setUser } = useContext(UserContext);
     //state hooks to store the values of the input fields
+	const [ firstName, setFirstName ] = useState('');
+	const [ lastName, setLastName ] = useState('');
+	const [ mobileNo, setMobileNo ] = useState('');
 	const [ email, setEmail ] = useState('');
 	const [ password, setPassword ] = useState('');
 	const [ verifyPassword, setVerifyPassword ] = useState('');
@@ -16,19 +23,68 @@ export default function Register() {
 
 	useEffect(() => {
 		//Validation to enable submit button
-		if((email !== '' && password !== '' && verifyPassword !== '') && (password === verifyPassword)){
+		if((firstName !== '' && lastName !== '' && mobileNo !== '' && email !== '' && password !== '' && verifyPassword !== '') && (password === verifyPassword)){
 			setIsActive(true);
 		}else {
 			setIsActive(false);
 		}
-	}, [email, password, verifyPassword])
+	}, [firstName, lastName, mobileNo, email, password, verifyPassword])
 
 
 	function registerUser(e) {
 		e.preventDefault();
 
+		fetch('http://localhost:4000/users/register', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				firstName:firstName,
+				lastName: lastName,
+				email: email,
+				password: password,
+				mobileNo: mobileNo
+			})
+		})
+		.then(response => response.json())
+		.then(data => {
+			console.log(data)
+			if(data!== undefined){
+				localStorage.setItem('data', data);
+				setUser({
+					data: data
+				})
+				navigate ('/products')
+			
+				Swal.fire({
+					title: 'Yaay!',
+					icon: 'success',
+					text: 'You are now registered. Enjoy shopping!'
+				})
+			}
+				else{
+					Swal.fire({
+						title: 'Ooopsss',
+						icon: 'error',
+						text: 'Something went wrong. Check your credentials.'
+					})
+				}
+				
+				setFirstName('');
+				setLastName('');
+				setEmail('');
+				setPassword('');
+				setPassword('');
+				setVerifyPassword ('');
+				setMobileNo('');
+})
+
+
+
+
+
+
 		//Clear input fields
-		setEmail('');
+		/* setEmail('');
 		setPassword('');
 		setVerifyPassword('');
 
@@ -36,13 +92,68 @@ export default function Register() {
 			title: 'Yaaaaaaaaaaaay!',
 			icon: 'success',
 			text: 'You have successfully registered!'
-		})
+		}) */
 	}
     return (
-       
+		(user.accessToken !== null) ? 
+
+		<Navigate to="/courses" />
+
+		:
     <div className="form-container mt-5 pb-4">
         <Form onSubmit={e => registerUser(e)}>
 		    <h1 className='white-text'>Register</h1>
+			<Form.Group>
+				{/* <Form.Label></Form.Label> */}
+				{/* <Form.Control  */}
+                    <input
+                    class="form-field"
+				    type="text"
+				    placeholder="Enter First Name"
+				    required
+				    value={firstName}
+				    onChange={e => setFirstName(e.target.value)}
+                    />
+				
+				{/* <Form.Text className="text-muted">
+					We'll never share your email with anyone else.
+				</Form.Text> */}
+                {<span id="error">Please enter your first name</span> }
+			</Form.Group>
+			<Form.Group>
+				{/* <Form.Label></Form.Label> */}
+				{/* <Form.Control  */}
+                    <input
+                    class="form-field"
+				    type="text"
+				    placeholder="Enter Last Name"
+				    required
+				    value={lastName}
+				    onChange={e => setLastName(e.target.value)}
+                    />
+				
+				{/* <Form.Text className="text-muted">
+					We'll never share your email with anyone else.
+				</Form.Text> */}
+                {<span id="error">Please enter your last name</span> }
+			</Form.Group>
+			<Form.Group>
+				{/* <Form.Label></Form.Label> */}
+				{/* <Form.Control  */}
+                    <input
+                    class="form-field"
+				    type="number"
+				    placeholder="Enter mobile number"
+				    required
+				    value={mobileNo}
+				    onChange={e => setMobileNo(e.target.value)}
+                    />
+				
+				{/* <Form.Text className="text-muted">
+					We'll never share your email with anyone else.
+				</Form.Text> */}
+                {<span id="error">Please enter mobile number</span> }
+			</Form.Group>
 			<Form.Group>
 				{/* <Form.Label></Form.Label> */}
 				{/* <Form.Control  */}

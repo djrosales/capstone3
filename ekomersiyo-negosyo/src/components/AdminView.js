@@ -1,48 +1,50 @@
-/* import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
 import AddProduct from './AddProduct';
-import EditCourse from './EditCourse';
-import ArchiveCourse from './ArchiveCourse';
+import EditProduct from './EditProduct';
+import ArchiveProduct from './ArchiveProduct';
 
 
 export default function AdminView(props) {
 
 	console.log(props)
-	const { coursesData, fetchData } = props;
+	const { storeProducts , fetchData } = props;
 
-	const [ courses, setCourses ] = useState([])
+	const [ products, setProducts ] = useState([])
 
 
 	useEffect(() => {
 
-		const coursesArr = coursesData.map(course => {
+		const productsArr = storeProducts.map(product => {
 			return(
-				<tr key={course._id}>
-					<td>{course._id}</td>
-					<td>{course.name}</td>
-					<td>{course.description}</td>
-					<td>{parseFloat(course.price).toFixed(2)}</td>
-					<td className={course.isActive ? "text-success" : "text-danger"}>
-						{course.isActive ? "Available" : "Unavailable"}
+				<tr key={product._id}>
+					<td>{product._id}</td>
+					<td>{product.name}</td>
+					<td>{product.description}</td>
+					<td>{product.manufacturer}</td>
+					<td>{parseFloat(product.price).toFixed(2)}</td>
+					<td>{product.img}</td>
+					<td className={product.isActive ? "text-success" : "text-danger"}>
+						{product.isActive ? "Available" : "Unavailable"}
 					</td>
-					<td>
-						<EditCourse course={course._id} fetchData={fetchData}/>
-					</td>
-					<td>
-						<ArchiveCourse course={course._id} isActive={course.isActive} fetchData={fetchData}/>
-					</td>
+					{/* <td>
+						<EditProduct product={product._id} fetchData={fetchData}/>
+					</td> */}
+					{/* <td>
+						<ArchiveProduct product={product._id} isActive={product.isActive} fetchData={fetchData}/>
+					</td> */}
 				</tr>
 				)
 		})
-		setCourses(coursesArr)
-	}, [coursesData])
+		setProducts(productsArr)
+	}, [storeProducts])
 
 
 	return(
 		<>
 			<div className="text-center my-4">
 				<h1>Admin Dashboard</h1>
-				<AddCourse fetchData={fetchData} />
+				<AddProduct fetchData={fetchData} />
 			</div>
 			
 			<Table striped bordered hover responsive>
@@ -51,18 +53,20 @@ export default function AdminView(props) {
 						<th>ID</th>
 						<th>NAME</th>
 						<th>DESCRIPTION</th>
+						<th>MANUFACTURER</th>
 						<th>PRICE</th>
+						<th>IMAGE</th>
 						<th>AVAILABILITY</th>
-						<th Colspan="2" className='text-center'>ACTIONS</th>
+						<th colSpan="2" className='text-center'>ACTIONS</th>
 					</tr>
 				</thead>
 
 				<tbody>
-					{ courses }
+					{ products }
 				</tbody>
 			</Table>
 
 		</>
 
 		)
-} */
+}
