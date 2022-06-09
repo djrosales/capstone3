@@ -21,19 +21,19 @@ export default function Details(){
                         <div className="col-10 mx-auto col-md-6 my-3">
                             <img src ={img} className="img-fluid" alt={name} />
                         </div>
-                        <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                        <div className="col-10 mx-auto col-md-6 my-3">
                             <h2>{name}</h2>
-                            <h4>
-                                manufactured by: <span className='text-uppercase text-muted mt-3 mb-2'>{manufacturer}
+                            <h5>
+                                Manufactured by: <span className='text-uppercase text-muted mt-3 mb-2'>{manufacturer}
                                 </span>
-                            </h4>
-                            <h4 className='text-brand'>
-                                <strong>price:<span>₱</span>
+                            </h5>
+                            <h5 className='text-brand'>
+                                <strong>Price: <span>₱</span>
                                 {price}
                                 </strong>
-                            </h4>
-                            <h4>
-                                <p className="text-capitalize font-weight-bold mt-3 mb-0">some info about product:
+                            </h5>
+                            <h5>
+                                <p className="font-weight-bold mt-3 mb-0">About this Item:
                                 </p>
                                 <p className="text-muted lead">{description}</p>
                                 <div>
@@ -49,7 +49,7 @@ export default function Details(){
                                             {inCart ? "inCart" :"Add to Cart" }
                                         </BackButton>
                                 </div>
-                            </h4>
+                            </h5>
                         </div>
                     </div>
                 </div>

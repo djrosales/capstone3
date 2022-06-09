@@ -2,15 +2,12 @@ import { useState, useContext} from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UserContext from '../UserContext';
-import { Component } from 'react';
 import logo from '../logo.png';
 import {ButtonCart, ButtonSign} from './Button';
 
 
 export default function AppNavbar() {
  const { user } = useContext(UserContext);
-/* 	const [ user, setUser ] = useState(localStorage.getItem('email'))*/
-	// console.log(user) 
 
 	return( 
 	
@@ -34,24 +31,18 @@ export default function AppNavbar() {
 						Products&nbsp;
 						</ButtonCart>
 						</Nav.Link>
-					
-
 						{(user.accessToken !== null) ?
 						<Nav.Link as={Link} to="/logout">Logout</Nav.Link>
-
 						:
 						<> 
 						<Nav.Link as={Link} to="/register" className='text-brand'>
 								<ButtonSign>&nbsp;SIGNUP&nbsp; </ButtonSign></Nav.Link>	
 
-								</>
+						</>
 						}
 				</Nav>
 			</Navbar.Collapse>
-		
-			
 		</Navbar>
-	
 
 		)
 }

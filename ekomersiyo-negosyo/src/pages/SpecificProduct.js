@@ -3,8 +3,7 @@ import { Container, Card, Button } from 'react-bootstrap';
 import UserContext from '../UserContext';
 import Swal from 'sweetalert2';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-//useParams() contains any values we are trying to pass in the URL stored
-//useParams is how we receive the courseId passed via the URL
+
 
 export default function SpecificProduct() {
 

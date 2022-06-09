@@ -4,17 +4,34 @@ import AddProduct from './AddProduct';
 import EditProduct from './EditProduct';
 import ArchiveProduct from './ArchiveProduct';
 
+export default async function AdminView() {
 
-export default function AdminView(props) {
-
-	console.log(props)
-	const { storeProducts , fetchData } = props;
-
+	// console.log(props)
+	// const { storeProducts , fetchData } = props;
+	const storeProducts = [];
+	const fetchData = null;
 	const [ products, setProducts ] = useState([])
+	
+	
+	function getProducts() {
+			const token = localStorage.getItem('accessToken');
+			fetch('http://localhost:4000/products/all', {
+						headers:{
+							Authorization: `Bearer ${token}`
+						}
+					})
+					.then(res => res.json())
+					.then(data => {
+						console.log(data)
+						storeProducts =data;
+					})
+			
+	
+	}
 
-
+	
 	useEffect(() => {
-
+		getProducts();
 		const productsArr = storeProducts.map(product => {
 			return(
 				<tr key={product._id}>
@@ -27,12 +44,12 @@ export default function AdminView(props) {
 					<td className={product.isActive ? "text-success" : "text-danger"}>
 						{product.isActive ? "Available" : "Unavailable"}
 					</td>
-					{/* <td>
+					 <td>
 						<EditProduct product={product._id} fetchData={fetchData}/>
-					</td> */}
-					{/* <td>
+					</td> 
+					 <td>
 						<ArchiveProduct product={product._id} isActive={product.isActive} fetchData={fetchData}/>
-					</td> */}
+					</td>
 				</tr>
 				)
 		})

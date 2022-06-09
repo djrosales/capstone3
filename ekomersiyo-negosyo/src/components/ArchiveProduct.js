@@ -1,5 +1,3 @@
-//ArchiveCourse.js
-
 import { Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
@@ -32,7 +30,7 @@ export default function ArchiveProduct({ product, isActive, fetchData}) {
 		})
 	}
 
-	//for activating the course
+	//for activating the product
 	const activateToggle = (productId) => {
 		fetch(`http://localhost:4000/products/${ productId }/activate`, {
 			method: 'PUT',

@@ -1,14 +1,13 @@
 
 export const storeProducts = [
-  //const data = [
     {
       id: 1,
       name: "Guinness",
       img: "img/guinness.jpg",
-      price: 5000,
-      manufacturer: "Diageo",
+      price: 399,
+      manufacturer: "	Diageo",
       description:
-        "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+        "It is the original nitrogen-infused beer. Although to the uninitiated, it can look dark and heavy, it actually tastes deliciously light and smooth, swirling with notes of roasted barley, caramel, coffee and chocolate.",
       inCart: false,
       count: 0,
       total: 0
@@ -17,22 +16,22 @@ export const storeProducts = [
       id: 2,
       name: "Becks Beer",
       img: "img/becks beer.jpg",
-      price: 500,
-      manufacturer: "Black Opal",
+      price: 94,
+      manufacturer: "Anheuser-Busch",
       description:
-        "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+        `Our original Beck’s is a classic German lager beer with a distinctive full-bodied taste, fresh "hoppy" bouquet, golden color and full rich head. Adding to its complexity is a slightly fruity but firm crispness and a dry, clean finish.`,
       inCart: false,
       count: 0,
       total: 0
     },
     {
       id: 3,
-      name: "Black Opal Shiraz",
+      name: "Black Opal",
       img: "img/black opal.webp",
-      price: 5000,
-      manufacturer: "DRC",
+      price: 449,
+      manufacturer: "Mildara Blass",
       description:
-        " Red Wine - Black Opal Shiraz  Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+        "Black Opal is dense in color with a violet rim. Ripe berry fruits along with fig and raisin add to the complex cedar aromas. The palate is soft plum with a dark fruit richness. The tannins are fine and supple making a round, mouth-filling wine.",
       inCart: false,
       count: 0,
       total: 0
@@ -41,10 +40,10 @@ export const storeProducts = [
       id: 4,
       name: "Romanée-Conti",
       img: "img/Romanee-Conti.jpg",
-      price: 1000000,
-      manufacturer: "Cameron",
+      price: 1300000,
+      manufacturer: "Domaine de la Romanée",
       description:
-        "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+        `Romanée-Conti has been called "one of the greatest wines of the world and the most perfect as well as the most expensive of Burgundy ... with a forceful bouquet of violet mixed with a scent of cherry, a lively and profound ruby robe, a suaveness of exceptional finesse."The wine has been highly regarded for centuries.`,
       inCart: false,
       count: 0,
       total: 0
@@ -53,34 +52,34 @@ export const storeProducts = [
       id: 5,
       name: "Yogi",
       img: "img/yogi.jpg",
-      price: 3000,
-      manufacturer: "Okinawa",
+      price: 350,
+      manufacturer: "Oregon",
       description:
-        "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+        `Yogi Kava Stress Relief tea is purposefully blended with Kava, a root traditionally used for its power to calm the body and mind and encourage a good night’s sleep. Cinnamon and Sarsaparilla add warmth and spice to this relaxing blend, while Carob Pod imparts rich flavor. Relax and find tranquility with a warm, soothing cup of Yogi Kava Stress Relief tea.`,
       inCart: false,
       count: 0,
       total: 0
     },
     {
       id: 6,
-      name: "Green Tea",
+      name: "Vahdam Tea",
       img: "img/white tea.jpg",
-      price: 2500,
-      manufacturer: "Delica AG",
+      price: 550,
+      manufacturer: "India",
       description:
-        "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+        "100% NATURAL & GREEN TEA LEAVES - Exclusive Long-Leaf Green Tea rich with Natural Antioxidants & Flavonoids. Hand-plucked & produced in high elevation tea plantations in the Himalayas. Low-Caffeine content tea that makes for a great detox tea",
       inCart: false,
       count: 0,
       total: 0
     },
     {
       id: 7,
-      name: "White tea",
+      name: "Scottish tea",
       img: "img/white tea.webp",
-      price: 4000,
-      manufacturer: "India",
+      price: 350,
+      manufacturer: " Brodie",
       description:
-        "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+        "Originally blended for the soft waters of Scotland, this traditional Scottish Breakfast blend can be enjoyed wherever you live. It's a blend of the very best Assam and African teas, with an inviting bright colour in the cup and a full, rich flavour, which makes it perfect for serving at breakfast time.",
       inCart: false,
       count: 0,
       total: 0
@@ -89,10 +88,10 @@ export const storeProducts = [
       id: 8,
       name: "Masala Chai",
       img: "img/masala chai.jpg",
-      price: 3000,
+      price: 300,
       manufacturer: "India",
       description:
-        "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+        "Masala chai'mixed-spice tea'- is an Indian tea beverage made by boiling black tea in milk and water with a mixture of aromatic herbs and spices. Originating in India the beverage has gained worldwide popularity, becoming a feature in many coffee and tea houses.",
       inCart: false,
       count: 0,
       total: 0
@@ -104,10 +103,10 @@ export const storeProducts = [
   id: 1,
   name: "Guinness",
   img: "img/guinness.jpg",
-  price: 5000,
-  manufacturer: "Diageo",
+  price: 399,
+  manufacturer: "	Diageo",
   description:
-    "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+    "It is the original nitrogen-infused beer. Although to the uninitiated, it can look dark and heavy, it actually tastes deliciously light and smooth, swirling with notes of roasted barley, caramel, coffee and chocolate.",
   inCart: false,
   count: 0,
   total: 0

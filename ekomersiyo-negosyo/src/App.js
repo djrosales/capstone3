@@ -15,23 +15,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import AdminView from './components/AdminView';
 import SpecificProduct from './pages/SpecificProduct';
 
-/* import { Container } from 'react-bootstrap'; */
-
-/* const [user, setUser] = useState({
-  email:localStorage.getItem('email')
-
-})
-const unsetUser = () =>{
-  localStorage.clear();
-}
- */
 
 function App() {
-
-  /* const [user, setUser] = useState({
-    email:localStorage.getItem('email')
-  
-  }) */
   const [ user, setUser ] = useState({
     accessToken: localStorage.getItem('accessToken'),
     isAdmin: localStorage.getItem('isAdmin') ==='true'
@@ -45,7 +30,6 @@ function App() {
 
   return (
   <UserProvider value = {{ user, setUser, unsetUser}}>
-{/*   <UserProvider> */}
     <ProductProvider>
       <BrowserRouter>
         <AppNavbar />
@@ -60,6 +44,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/logout" element={<Logout />} />
               <Route path="/adminView" element={<AdminView />} />
+              <Route path="/specific" element={<SpecificProduct />} />
               <Route path='*' element={<PageNotFound />} />
             </Route>
           </Routes>

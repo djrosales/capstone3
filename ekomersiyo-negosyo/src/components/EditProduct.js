@@ -26,7 +26,7 @@ export default function EditProduct({ product, fetchData }){
 		.then(data => {
 			console.log(data)
 
-			//populate all input values with the product information that we fetched
+			//populate all input values with the product information that being fetched
 			setProductId(data._id)
 			setName(data.name)
 			setDescription(data.description)
@@ -96,9 +96,6 @@ export default function EditProduct({ product, fetchData }){
 	return(
 		<>
 			<Button variant="primary" size="sm" onClick={() => openEdit(product)}>Update</Button>
-
-		{/*Edit Modal*/}
-
 			<Modal show={showEdit} onHide={closeEdit}>
 				<Form onSubmit={e => editProduct(e, productId)}>
 					<Modal.Header closeButton>

@@ -5,11 +5,11 @@ import { NavLink } from "react-router-dom";
 import UserContext from '../UserContext';
 import { Navigate, useNavigate } from 'react-router-dom';
 import React from 'react';
-//import './App.css';
 
 export default function Registration() {
 	const navigate = useNavigate();
 	const { user, setUser } = useContext(UserContext);
+
     //state hooks to store the values of the input fields
 	const [ firstName, setFirstName ] = useState('');
 	const [ lastName, setLastName ] = useState('');
@@ -78,106 +78,63 @@ export default function Registration() {
 				setMobileNo('');
 })
 
-
-
-
-
-
-		//Clear input fields
-		/* setEmail('');
-		setPassword('');
-		setVerifyPassword('');
-
-		Swal.fire({
-			title: 'Yaaaaaaaaaaaay!',
-			icon: 'success',
-			text: 'You have successfully registered!'
-		}) */
 	}
     return (
 		(user.accessToken !== null) ? 
 
 		<Navigate to="/courses" />
-
 		:
     <div className="form-container mt-5 pb-4">
         <Form onSubmit={e => registerUser(e)}>
 		    <h1 className='white-text'>Register</h1>
 			<Form.Group>
-				{/* <Form.Label></Form.Label> */}
-				{/* <Form.Control  */}
                     <input
-                    class="form-field"
+                    className="form-field"
 				    type="text"
 				    placeholder="Enter First Name"
 				    required
 				    value={firstName}
 				    onChange={e => setFirstName(e.target.value)}
                     />
-				
-				{/* <Form.Text className="text-muted">
-					We'll never share your email with anyone else.
-				</Form.Text> */}
                 {<span id="error">Please enter your first name</span> }
 			</Form.Group>
 			<Form.Group>
-				{/* <Form.Label></Form.Label> */}
-				{/* <Form.Control  */}
                     <input
-                    class="form-field"
+                    className="form-field"
 				    type="text"
 				    placeholder="Enter Last Name"
 				    required
 				    value={lastName}
 				    onChange={e => setLastName(e.target.value)}
                     />
-				
-				{/* <Form.Text className="text-muted">
-					We'll never share your email with anyone else.
-				</Form.Text> */}
                 {<span id="error">Please enter your last name</span> }
 			</Form.Group>
 			<Form.Group>
-				{/* <Form.Label></Form.Label> */}
-				{/* <Form.Control  */}
                     <input
-                    class="form-field"
+                    className="form-field"
 				    type="number"
 				    placeholder="Enter mobile number"
 				    required
 				    value={mobileNo}
 				    onChange={e => setMobileNo(e.target.value)}
                     />
-				
-				{/* <Form.Text className="text-muted">
-					We'll never share your email with anyone else.
-				</Form.Text> */}
                 {<span id="error">Please enter mobile number</span> }
 			</Form.Group>
 			<Form.Group>
-				{/* <Form.Label></Form.Label> */}
-				{/* <Form.Control  */}
                     <input
-                    class="form-field"
+                    className="form-field"
 				    type="email"
 				    placeholder="Enter email"
 				    required
 				    value={email}
 				    onChange={e => setEmail(e.target.value)}
                     />
-				
-				{/* <Form.Text className="text-muted">
-					We'll never share your email with anyone else.
-				</Form.Text> */}
                 {<span id="error">Please enter an email</span> }
 			</Form.Group>
 
 			<Form.Group>
-				{/* <Form.Label></Form.Label> */}
-				{/* <Form.Control  */}
-                  
                 <input
-                    class="form-field"
+                    className="form-field"
 				    type="password"
 				    placeholder="Enter your Password"
 				    required
@@ -188,11 +145,8 @@ export default function Registration() {
 			</Form.Group>
 
 			<Form.Group>
-				{/* <Form.Label></Form.Label> */}
-				{/* <Form.Control  */}
-                
                 <input
-                    class="form-field"
+                    className="form-field"
 				    type="password"
 				    placeholder="Verify Password"
 				    required

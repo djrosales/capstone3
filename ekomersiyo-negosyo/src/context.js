@@ -1,24 +1,8 @@
-/* import React from 'react';
-
-const ProductContext = React.createContext();
-
-export const ProductProvider = ProductContext.Provider;
-
-
- export default ProductContext;
-const ProductConsumer = ProductContext.Consumer;
-
-export {ProductConsumer};
-  */
-
-
-
-//--------------------------
 import React, {Component} from 'react';
 import {storeProducts, detailProduct} from './components/data';
 
-const ProductContext = React.createContext();
 
+const ProductContext = React.createContext();
 
 class ProductProvider extends Component{
     state={
@@ -66,7 +50,6 @@ class ProductProvider extends Component{
         product.inCart = true;
         product.count = 1;
         const price = product.price;
-        // const total = price * product.count;
         product.total = price;
         this.setState(()=>{
             return{products:tempProducts, cart: [...this.state.cart,product]};
@@ -161,11 +144,6 @@ class ProductProvider extends Component{
                 cartTax:tax,
                 cartTotal:total
             }
-        // },()=>{
-            // this.setProducts();
-        //     this.addTotals();
-        // })
-    
     
         })
     };
@@ -192,20 +170,6 @@ class ProductProvider extends Component{
 
 
 const ProductConsumer = ProductContext.Consumer;
-// const UserContext = ProductContext.User;
 
 
 export{ProductProvider, ProductConsumer};
-// export{ProductProvider, ProductConsumer, UserContext};
-
-
-
-//----
-
-/* 
-const UserContext = React.createContext();
-
-export const UserProvider = UserContext.Provider;
-
-export default UserContext;
- */

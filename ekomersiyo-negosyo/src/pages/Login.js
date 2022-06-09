@@ -4,7 +4,6 @@ import Swal from 'sweetalert2';
 import UserContext from '../UserContext';
 import { Navigate, useNavigate } from 'react-router-dom';
 
-// import axios from 'axios';
 
 
 export default function Login() {
@@ -49,7 +48,7 @@ export default function Login() {
 					icon: 'success',
 					text: 'Welcome to eKomersiyoNegosyo!'
 				})
-				//get user's details from our token
+				//get user's details from the token
 				fetch('http://localhost:4000/users/details', {
 					headers:{
 						Authorization: `Bearer ${data.accessToken}`
@@ -64,10 +63,10 @@ export default function Login() {
 						setUser({
 							isAdmin: data.isAdmin
 						})
-						//push to the /products
-						navigate ('/products')
+					
+						navigate ('/adminView')
 					}else{
-						//If not an admin, push to '/' (homepage)
+					
 						navigate('/')
 					}
 				})
@@ -86,48 +85,11 @@ export default function Login() {
 
 	}
 
-
-
-
-	//button
-	/* const [ isActive, setIsActive ] = useState(true);
-
-	useEffect(() => {
-		if(email !== '' && password !== '') {
-			setIsActive(true);
-		} else {
-			setIsActive(false);
-		}
-	}, [email, password]) */
-
-	/* function authentication(e) {
-		e.preventDefault(); */
-
-		//Set the email of the authenticated user in the localStorage
-		//localStorage.setItem('propertyName', value)
-		//setItem to store information in localStorage
-		// localStorage.setItem('email', email);
-
-
-		//clear inputs
-		/* setEmail('');
-		setPassword('');
-
-		Swal.fire({
-			title: 'Yay!',
-			icon: 'success',
-			text: `You are now login. Enjoy shopping!`
-		})
-	} */
-
 	return(
 		
 		(user.accessToken !== null) ?
-
 		<Navigate to="/products" />
-
 		:
-		
           <div className="form-container mt-5 pb-3">
 		<Form onSubmit={e => authentication(e)}>
             <h1 className='white-text'>Login</h1>

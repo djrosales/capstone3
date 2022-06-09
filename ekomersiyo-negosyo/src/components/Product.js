@@ -1,11 +1,10 @@
-// import { Card, CardGroup, Button, Row, Col } from "react-bootstrap";
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import FontAwesomeIcon from 'react-dom';
 import { ProductConsumer } from '../context';
 import  '../Products.css';
 import PropTypes from 'prop-types';
-// import React, {Component} from "react";
+
 
 export default function Product({productProp}){
   const {id, name, img, price, inCart} = productProp;
@@ -14,7 +13,7 @@ export default function Product({productProp}){
     <>
     <div>
    <ProdWrapper className='main_content col-12'>
-         {/* <h1>hello from product page</h1> */}
+     
         <div className='card'>
 
         <ProductConsumer>
@@ -28,7 +27,6 @@ export default function Product({productProp}){
                   {inCart ? (<p className='text-capitalize mb-0' disabled> {" "} in Cart </p>)
                     : (
                       <i className="fa fa-cart-plus" />
-                      //  <Link to ='/cart'><i className="fa fa-cart-plus" /></Link>
                     )}
                 </button>
                 <div className='container p-4' onClick={() => value.handleDetail(id) }>

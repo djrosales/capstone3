@@ -16,7 +16,7 @@ export default function AddProduct({fetchData}) {
 	//States for opening and closing the modals
 	const [ showAdd, setShowAdd ] = useState(false);
 
-	//Functions to handle opening and closing of our Modal
+	//Functions to handle opening and closing the Modal
 	const openAdd = () => setShowAdd(true);
 	const closeAdd = () => setShowAdd(false); 
 
@@ -49,10 +49,8 @@ export default function AddProduct({fetchData}) {
 					text: 'Course successfully added.'
 				})
 
-				//Close our modal
 				closeAdd()
-				//you can use this as an alternative to refresh the whole document and get the updated data.
-				// window.location.reload()
+			
 				fetchData()
 			}else {
 				Swal.fire({
@@ -64,7 +62,7 @@ export default function AddProduct({fetchData}) {
 				fetchData()
 			}
 
-			//reset all states input..
+			//reset all states input
             setName('')
 			setDescription('')
 			setPrice(0)
