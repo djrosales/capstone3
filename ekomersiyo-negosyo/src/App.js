@@ -12,7 +12,7 @@ import PageNotFound from './pages/PageNotFound';
 import { UserProvider } from './UserContext';
 import { ProductProvider} from './context';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import AdminView from './components/AdminView';
+import AdminPage from './pages/AdminPage';
 import SpecificProduct from './pages/SpecificProduct';
 
 
@@ -43,7 +43,7 @@ function App() {
               <Route path="/register" element={<Registration />} />
               <Route path="/login" element={<Login />} />
               <Route path="/logout" element={<Logout />} />
-              <Route path="/adminView" element={<AdminView />} />
+              <Route path="/adminPage" element={<AdminPage />} />
               <Route path="/specific" element={<SpecificProduct />} />
               <Route path='*' element={<PageNotFound />} />
             </Route>

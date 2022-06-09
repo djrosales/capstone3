@@ -46,7 +46,7 @@ export default function AddProduct({fetchData}) {
 				Swal.fire({
 					title: 'Success',
 					icon: 'success',
-					text: 'Course successfully added.'
+					text: 'Product successfully added.'
 				})
 
 				closeAdd()
