@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export default function ErrorPage(){
+export default function PageNotFound(){
         return(
             <>
                  <div className="align mt-5">

@@ -37,7 +37,7 @@ export default function AdminView(props) {
 						<th>DESCRIPTION</th>
 						<th>MANUFACTURER</th>
 						<th>PRICE</th>
-						<th>IMAGE</th>
+						<th>IMAGE-PATH</th>
 						<th>AVAILABILITY</th>
 						<th colSpan="2" className='text-center'>ACTIONS</th>
 

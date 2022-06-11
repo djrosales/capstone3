@@ -125,7 +125,7 @@ export default function AddProduct({fetchData}) {
 							 />
 						</Form.Group>
                         <Form.Group>
-							<Form.Label>Product Image</Form.Label>
+							<Form.Label>Image-path</Form.Label>
 							<Form.Control 
 							      type="text"
 							      required

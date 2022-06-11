@@ -29,7 +29,7 @@ export default function AdminPage() {
 	}
 
 	useEffect(() => {
-		getProducts();//1
+		getProducts();
 	}, [])
 
 
@@ -40,7 +40,7 @@ export default function AdminPage() {
 
 			{(user.isAdmin === true) ?
 
-				<AdminView storeProducts={allProducts} fetchData={getProducts} />//1
+				<AdminView storeProducts={allProducts} fetchData={getProducts} />
 
 				:
 

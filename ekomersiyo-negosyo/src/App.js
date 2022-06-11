@@ -14,6 +14,7 @@ import { ProductProvider} from './context';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import AdminPage from './pages/AdminPage';
 import SpecificProduct from './pages/SpecificProduct';
+import UserView from './components/UserView';
 
 
 function App() {
@@ -45,6 +46,8 @@ function App() {
               <Route path="/logout" element={<Logout />} />
               <Route path="/adminPage" element={<AdminPage />} />
               <Route path="/specific" element={<SpecificProduct />} />
+              <Route path="/userView" element={<UserView />} />
+
               <Route path='*' element={<PageNotFound />} />
             </Route>
           </Routes>

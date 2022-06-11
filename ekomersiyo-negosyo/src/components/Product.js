@@ -1,13 +1,17 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { useState, useEffect, useContext } from 'react';
+import {Link, Navigate, useNavigate} from 'react-router-dom';
 import FontAwesomeIcon from 'react-dom';
 import { ProductConsumer } from '../context';
 import  '../Products.css';
 import PropTypes from 'prop-types';
+import UserContext from '../UserContext';
 
 
 export default function Product({productProp}){
   const {id, name, img, price, inCart} = productProp;
+  const navigate = useNavigate();
+  const { user, setUser } = useContext(UserContext);
   
   return(
     <>
@@ -20,16 +24,27 @@ export default function Product({productProp}){
           {value => (
              <>
              <button className='cart-btn' disabled={inCart ? true : false} onClick={() => {
+              if (user.accessToken !== null) {
                  value.addToCart(id);
                  value.openModal(id);
-
+            }else{
+              navigate('/register')
+            }
                 } }>
                   {inCart ? (<p className='text-capitalize mb-0' disabled> {" "} in Cart </p>)
                     : (
                       <i className="fa fa-cart-plus" />
                     )}
                 </button>
-                <div className='container p-4' onClick={() => value.handleDetail(id) }>
+                <div className='container p-4' onClick={() =>{
+                  if (user.accessToken !== null) {
+                  value.handleDetail(id);
+                }else{
+                  navigate('/register')
+                }
+              }
+                
+                  }>
 
                     <Link to="/details">
                       <img src={img} alt={name} className='card-img-top' />
