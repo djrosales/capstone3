@@ -124,7 +124,7 @@ export default function AddProduct({fetchData}) {
 							      onChange={e => setManufacturer(e.target.value)}
 							 />
 						</Form.Group>
-                        <Form.Group>
+                       {/*  <Form.Group>
 							<Form.Label>Image-path</Form.Label>
 							<Form.Control 
 							      type="text"
@@ -132,7 +132,7 @@ export default function AddProduct({fetchData}) {
 							      value={img}
 							      onChange={e => setImg(e.target.value)}
 							 />
-						</Form.Group>
+						</Form.Group> */}
 					</Modal.Body>
 
 					<Modal.Footer>

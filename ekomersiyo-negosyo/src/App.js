@@ -17,6 +17,7 @@ import SpecificProduct from './pages/SpecificProduct';
 import UserView from './components/UserView';
 
 
+
 function App() {
   const [ user, setUser ] = useState({
     accessToken: localStorage.getItem('accessToken'),
@@ -47,7 +48,6 @@ function App() {
               <Route path="/adminPage" element={<AdminPage />} />
               <Route path="/specific" element={<SpecificProduct />} />
               <Route path="/userView" element={<UserView />} />
-
               <Route path='*' element={<PageNotFound />} />
             </Route>
           </Routes>

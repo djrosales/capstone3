@@ -28,7 +28,7 @@ export default function AdminView(props) {
 				<h1>Admin Dashboard</h1>
 				<AddProduct fetchData={fetchData} />
 			</div>
-			
+			<div className='mx-5'>
 			<Table striped bordered hover responsive>
 				<thead className="bg-dark text-white">
 					<tr>
@@ -37,7 +37,7 @@ export default function AdminView(props) {
 						<th>DESCRIPTION</th>
 						<th>MANUFACTURER</th>
 						<th>PRICE</th>
-						<th>IMAGE-PATH</th>
+						{/* <th>IMAGE-PATH</th> */}
 						<th>AVAILABILITY</th>
 						<th colSpan="2" className='text-center'>ACTIONS</th>
 
@@ -52,7 +52,7 @@ export default function AdminView(props) {
 					<td>{product.description}</td>
 					<td>{product.manufacturer}</td>
 					<td>{parseFloat(product.price).toFixed(2)}</td>
-					<td>{product.img}</td>
+					{/* <td>{product.img}</td> */}
 					<td className={product.isActive ? "text-success" : "text-danger"}>
 						{product.isActive ? "Available" : "Unavailable"}
 					</td>
@@ -65,6 +65,7 @@ export default function AdminView(props) {
 				</tr>) }
 				</tbody>
 			</Table>
+			</div>
 
 		</>
 

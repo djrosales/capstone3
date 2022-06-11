@@ -142,7 +142,7 @@ export default function EditProduct({ product, fetchData }){
 							      onChange={e => setPrice(e.target.value)}
 							 />
 						</Form.Group>
-                        <Form.Group>
+                        {/* <Form.Group>
 							<Form.Label>Image</Form.Label>
 							<Form.Control 
 							      type="text"
@@ -150,7 +150,7 @@ export default function EditProduct({ product, fetchData }){
 							      value={img}
 							      onChange={e => setImage(e.target.value)}
 							 />
-						</Form.Group>
+						</Form.Group> */}
 					</Modal.Body>
 
 					<Modal.Footer>

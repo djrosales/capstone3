@@ -1,17 +1,20 @@
 import styled from 'styled-components';
 import { useState, useEffect, useContext } from 'react';
 import {Link, Navigate, useNavigate} from 'react-router-dom';
-import FontAwesomeIcon from 'react-dom';
 import { ProductConsumer } from '../context';
 import  '../Products.css';
 import PropTypes from 'prop-types';
 import UserContext from '../UserContext';
+import Swal from 'sweetalert2';
+import AdminPage from '../pages/AdminPage';
+
 
 
 export default function Product({productProp}){
   const {id, name, img, price, inCart} = productProp;
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
+  // const isAdmin = true;
   
   return(
     <>
@@ -27,8 +30,14 @@ export default function Product({productProp}){
               if (user.accessToken !== null) {
                  value.addToCart(id);
                  value.openModal(id);
-            }else{
-              navigate('/register')
+            }else if(user.isAdmin === true) {
+              
+              navigate('/adminPage');
+              
+            }
+            else{
+              Swal.fire('You need to sign up first.')
+            
             }
                 } }>
                   {inCart ? (<p className='text-capitalize mb-0' disabled> {" "} in Cart </p>)
@@ -40,6 +49,7 @@ export default function Product({productProp}){
                   if (user.accessToken !== null) {
                   value.handleDetail(id);
                 }else{
+                  Swal.fire('You need to sign up first.')
                   navigate('/register')
                 }
               }
