@@ -17,7 +17,7 @@ import CartTotals from './CartTotals';
                     if(cart.length>0){
                         return(
                             <>
-                            <Title prodName="your " label="cart" />
+                            <Title prodName="your " label="cart"  />
                             <CartColumns />
                             <CartList value={value}/>
                             <CartTotals value={value} />

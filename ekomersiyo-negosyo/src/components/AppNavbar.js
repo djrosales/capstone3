@@ -11,7 +11,7 @@ export default function AppNavbar() {
 
 	return( 
 	
-		<Navbar bg="dark" expand="sm" variant="dark" className="nav-border px-sm-4">
+		<Navbar bg="dark" expand="lg" variant="dark" className="nav-border px-sm-4">
 			<Nav.Link as ={Link} to="/"><img src={logo} alt="logo" className='navbar-logo'/></Nav.Link>
 			<ul className='navbar-nav align-items-center'>
 				<li className='m-auto'>

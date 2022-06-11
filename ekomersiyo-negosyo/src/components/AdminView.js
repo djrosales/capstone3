@@ -45,7 +45,8 @@ export default function AdminView(props) {
 				</thead>
 
 				<tbody>
-					{ storeProducts.map(product => <tr key={product._id}>
+					{ storeProducts.map(product => 
+					<tr key={product._id}>
 					<td>{product._id}</td>
 					<td>{product.name}</td>
 					<td>{product.description}</td>

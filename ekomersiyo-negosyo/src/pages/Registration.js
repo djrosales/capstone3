@@ -85,7 +85,7 @@ export default function Registration() {
 		<Navigate to="/courses" />
 		:
     <div className="form-container mt-5 pb-4">
-        <Form onSubmit={e => registerUser(e)}>
+        <Form className="form-layout" onSubmit={e => registerUser(e)}>
 		    <h1 className='white-text'>Register</h1>
 			<Form.Group>
                     <input

@@ -95,11 +95,12 @@ export default function EditProduct({ product, fetchData }){
 
 	return(
 		<>
+		<div className='text-center'>
 			<Button variant="primary" size="sm" onClick={() => openEdit(product)}>Update</Button>
 			<Modal show={showEdit} onHide={closeEdit}>
 				<Form onSubmit={e => editProduct(e, productId)}>
 					<Modal.Header closeButton>
-						<Modal.Title>Add Product</Modal.Title>
+						<Modal.Title>Update Product</Modal.Title>
 					</Modal.Header>
 
 					<Modal.Body>
@@ -159,6 +160,7 @@ export default function EditProduct({ product, fetchData }){
 
 				</Form>
 			</Modal>
+			</div>
 
 		</>
 

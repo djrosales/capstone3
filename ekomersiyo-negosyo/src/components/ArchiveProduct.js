@@ -14,16 +14,16 @@ export default function ArchiveProduct({ product, isActive, fetchData}) {
 		.then(data =>{
 			if(data === true) {
 				Swal.fire({
-					title: 'success',
+					title: '',
 					icon: 'success',
-					text: 'Product successfully disabled.'
+					text: 'This product is now unavailable.'
 				})
 				fetchData()
 			}else {
 				Swal.fire({
-					title: 'error',
-					icon: 'error',
-					text: 'Something went wrong'
+					title: 'Success!',
+					icon: 'success',
+					text: 'This product is now available.'
 				})
 				fetchData()
 			}
@@ -42,16 +42,16 @@ export default function ArchiveProduct({ product, isActive, fetchData}) {
 		.then(data => {
 			if(data === true) {
 				Swal.fire({
-					title: 'success',
+					title: '',
 					icon: 'success',
-					text: 'Course successfully enabled'
+					text: 'This product is now unavailable.'
 				})
 				fetchData()
 			}else {
 				Swal.fire({
-					title: 'error',
-					icon: 'error',
-					text: 'Something went wrong'
+					title: 'Success!',
+					icon: 'success',
+					text: 'This product is now available.'
 				})
 				fetchData()
 			}
@@ -61,6 +61,7 @@ export default function ArchiveProduct({ product, isActive, fetchData}) {
 	return(
 
 		<>
+		<div className='text-center'>
 
 			{isActive  ?
 				<Button variant="danger" size="sm" onClick={() => archiveToggle(product)}>Disable</Button>
@@ -70,6 +71,7 @@ export default function ArchiveProduct({ product, isActive, fetchData}) {
 				<Button variant="success" size="sm" onClick={() => activateToggle(product)}>Enable</Button>
 
 			}
+			</div>
 			
 		</>
 		)

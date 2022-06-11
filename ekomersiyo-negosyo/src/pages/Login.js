@@ -72,9 +72,9 @@ export default function Login() {
 				})
 			}else{
 				Swal.fire({
-					title: 'Ooopsss',
+					title: 'Ooops!',
 					icon: 'error',
-					text: 'Something went wrong. Check your credentials'
+					text: 'Incorrect username or password.'
 				})
 				
 			}
@@ -86,12 +86,11 @@ export default function Login() {
 	}
 
 	return(
-		
 		(user.accessToken !== null) ?
 		<Navigate to="/products" />
 		:
           <div className="form-container mt-5 pb-3">
-		<Form onSubmit={e => authentication(e)}>
+		<Form className="form-layout" onSubmit={e => authentication(e)}>
             <h1 className='white-text'>Login</h1>
 			<Form.Group>
 				<small className='white-text '>Email Address</small>

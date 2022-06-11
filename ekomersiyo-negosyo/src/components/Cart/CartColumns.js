@@ -2,7 +2,7 @@
 
 export default function CartColumns (){
     return(
-       <div className="container-fluid text-center d-none d-lg-block">
+       <div className="container-fluid mt-5 text-center d-none d-lg-block">
            <div className="row">
                <div className="col-10 mx-auto col-lg-2">
                    <p className="text-uppercase">

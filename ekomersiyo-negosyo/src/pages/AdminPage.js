@@ -2,7 +2,7 @@ import AdminView from '../components/AdminView';
 import { useContext, useEffect, useState } from 'react';
 import UserContext from '../UserContext';
 import UserView from '../components/UserView';
-import storeProducts from '../components/data';
+// import storeProducts from '../components/data';
 
 
 
@@ -37,7 +37,6 @@ export default function AdminPage() {
 
 	return (
 		<>
-			<h1>Products</h1>
 
 			{(user.isAdmin === true) ?
 
