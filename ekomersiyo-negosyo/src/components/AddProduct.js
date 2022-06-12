@@ -1,26 +1,17 @@
-
 import { useState } from 'react';
 import { Button, Modal, Form } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
 export default function AddProduct({fetchData}) {
-
-	//Add state for the forms of adding a product
 	const [ name, setName ] = useState('');
 	const [ description, setDescription ] = useState('');
 	const [ price, setPrice ] = useState(0);
     const [ img, setImg ] = useState('');
     const [ manufacturer, setManufacturer ] = useState('');
-  
-
-	//States for opening and closing the modals
 	const [ showAdd, setShowAdd ] = useState(false);
-
-	//Functions to handle opening and closing the Modal
 	const openAdd = () => setShowAdd(true);
 	const closeAdd = () => setShowAdd(false); 
 
-	//function for adding a product
 	const addProduct = (e) => {
 		e.preventDefault();
 
@@ -40,8 +31,6 @@ export default function AddProduct({fetchData}) {
 		})
 		.then(res => res.json())
 		.then(data => {
-			console.log(data)
-
 			if(data){
 				Swal.fire({
 					title: 'Success',
@@ -61,8 +50,6 @@ export default function AddProduct({fetchData}) {
 
 				fetchData()
 			}
-
-			//reset all states input
             setName('')
 			setDescription('')
 			setPrice(0)
@@ -76,9 +63,6 @@ export default function AddProduct({fetchData}) {
 	return(
 		<>
 			<Button variant="primary" onClick={openAdd}>Add New Product</Button>
-
-			{/* Add Modal */}
-
 			<Modal show={showAdd} onHide={closeAdd}>
 				<Form onSubmit={e => addProduct(e)}>
 					<Modal.Header closeButton>
@@ -124,15 +108,6 @@ export default function AddProduct({fetchData}) {
 							      onChange={e => setManufacturer(e.target.value)}
 							 />
 						</Form.Group>
-                       {/*  <Form.Group>
-							<Form.Label>Image-path</Form.Label>
-							<Form.Control 
-							      type="text"
-							      required
-							      value={img}
-							      onChange={e => setImg(e.target.value)}
-							 />
-						</Form.Group> */}
 					</Modal.Body>
 
 					<Modal.Footer>
@@ -143,16 +118,6 @@ export default function AddProduct({fetchData}) {
 				</Form>
 			</Modal>
 		</>
-
-
-
-
-
-
-
-
-
-
 
 		)
 }

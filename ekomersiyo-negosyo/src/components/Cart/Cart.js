@@ -36,5 +36,5 @@ import { Component } from 'react';
         </section>
         
     )
-            }
+  }
 } 

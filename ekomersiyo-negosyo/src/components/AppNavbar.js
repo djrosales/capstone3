@@ -1,4 +1,4 @@
-import { useState, useContext} from 'react';
+import { useContext} from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UserContext from '../UserContext';
@@ -9,8 +9,7 @@ import {ButtonCart, ButtonSign} from './Button';
 export default function AppNavbar() {
  const { user } = useContext(UserContext);
 
-	return( 
-	
+	return(
 		<Navbar bg="dark" expand="lg" variant="dark" className="nav-border px-sm-4">
 			<Nav.Link as ={Link} to="/"><img src={logo} alt="logo" className='navbar-logo'/></Nav.Link>
 			<ul className='navbar-nav align-items-center'>
@@ -18,11 +17,9 @@ export default function AppNavbar() {
 				<Nav.Link as ={Link} to="/" className='text-brand'>eKomersiyoNegosyo</Nav.Link>
 				</li>
 			</ul>
-			
 			<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 			<Navbar.Collapse id="basic-navbar-nav">
 				<Nav className="ms-auto">
-					{/* <Nav.Link as={Link} to="/" className='text-brand'>Home</Nav.Link> */}
 					<Nav.Link as={Link} to="/products" className='text-brand'>
 						<ButtonCart>
 							<span className='mx-2'>
@@ -37,7 +34,6 @@ export default function AppNavbar() {
 						<> 
 						<Nav.Link as={Link} to="/register" className='text-brand'>
 								<ButtonSign>&nbsp;SIGNUP&nbsp; </ButtonSign></Nav.Link>	
-
 						</>
 						}
 				</Nav>

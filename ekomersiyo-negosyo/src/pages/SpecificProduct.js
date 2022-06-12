@@ -8,9 +8,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 export default function SpecificProduct() {
 
 	const navigate = useNavigate();
-
 	const { productId } = useParams();
-
 	const [name, setName] = useState('');
 	const [description, setDescription] = useState('');
 	const [price, setPrice] = useState(0);
@@ -29,9 +27,6 @@ export default function SpecificProduct() {
 	}, [])
 
 	const { user } = useContext(UserContext);
-
-
-	//product function
 	const order = (productId) => {
 
 		fetch('http://localhost:4000/orders/create', {
@@ -46,15 +41,12 @@ export default function SpecificProduct() {
 		})
 		.then(res => res.json())
 		.then(data => {
-			console.log(data)
-
 			if(data){
 				Swal.fire({
 					title: 'Successfully checkout!',
 					icon: 'success',
 					text: `You have successfully ordered for this ${ name } product`
 				})
-
 				navigate('/products')
 			} else {
 				Swal.fire({
@@ -77,15 +69,12 @@ export default function SpecificProduct() {
 					<Card.Text>{ description }</Card.Text>
 					<h6>Price: Php { price } </h6>
 				</Card.Body>
-
 				<Card.Footer>
 				{ user.accessToken !== null ?
 					<Button variant="primary" onClick={() => order(productId)}>Checkout</Button>
 					:
 					<Button variant="warning" as={ Link } to="/login">Login to add to cart</Button>
 				 }
-					
-					
 				</Card.Footer>
 			</Card>
 		</Container>

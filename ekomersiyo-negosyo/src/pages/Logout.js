@@ -9,8 +9,7 @@ export default function Logout() {
 	unsetUser();
 
 	useEffect(() => {
-		setUser({
-			// email: null 
+		setUser({ 
 		 accessToken: null
 		})
 	}, [])

@@ -8,8 +8,6 @@
   
 }
  body { 
-  /* display: flex;  */
-  /* min-height: 100vh;  */
   justify-content: center;
   align-items: center;
 } 
@@ -74,7 +72,6 @@ input {
   text-align: center;
 }
 #btn{
- /* background: rgb(252, 4, 252); */
   background:#ffa400; 
   color:white;
 }
@@ -93,7 +90,6 @@ input {
 
 }
 body{
-  /* font-family:'Oswald',sans-serif !important; */
   background:var(--ligthGray) !important;  
 
 }
@@ -129,7 +125,6 @@ body{
 }
 #cartTotal{
   display:flex;
-  /* justify-content:space-between; */
   flex-direction: column;
   align-items:flex-end;
 }

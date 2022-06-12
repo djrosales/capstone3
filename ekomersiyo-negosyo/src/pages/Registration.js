@@ -9,20 +9,15 @@ import React from 'react';
 export default function Registration() {
 	const navigate = useNavigate();
 	const { user, setUser } = useContext(UserContext);
-
-    //state hooks to store the values of the input fields
 	const [ firstName, setFirstName ] = useState('');
 	const [ lastName, setLastName ] = useState('');
 	const [ mobileNo, setMobileNo ] = useState('');
 	const [ email, setEmail ] = useState('');
 	const [ password, setPassword ] = useState('');
 	const [ verifyPassword, setVerifyPassword ] = useState('');
-
-	//state for the enable/disable button
 	const [ isActive, setIsActive ] = useState(true);
 
 	useEffect(() => {
-		//Validation to enable submit button
 		if((firstName !== '' && lastName !== '' && mobileNo !== '' && email !== '' && password !== '' && verifyPassword !== '') && (password === verifyPassword)){
 			setIsActive(true);
 		}else {
@@ -47,7 +42,6 @@ export default function Registration() {
 		})
 		.then(response => response.json())
 		.then(data => {
-			console.log(data)
 			if(data!== undefined){
 				localStorage.setItem('data', data);
 				setUser({

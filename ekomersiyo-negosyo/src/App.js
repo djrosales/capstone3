@@ -24,7 +24,6 @@ function App() {
     isAdmin: localStorage.getItem('isAdmin') ==='true'
 })
 
-
   const unsetUser = () =>{
     localStorage.clear();
   }
@@ -35,7 +34,6 @@ function App() {
     <ProductProvider>
       <BrowserRouter>
         <AppNavbar />
-        {/* <Container> */}
           <Routes>
             <Route>
               <Route path="/" element={<Home />} />
@@ -51,7 +49,6 @@ function App() {
               <Route path='*' element={<PageNotFound />} />
             </Route>
           </Routes>
-        {/* </Container> */}
       </BrowserRouter>
     </ProductProvider>
     </UserProvider>

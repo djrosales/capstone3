@@ -7,13 +7,10 @@ import { Navigate, useNavigate } from 'react-router-dom';
 
 
 export default function Login() {
-
 	const navigate = useNavigate();
 	const { user, setUser } = useContext(UserContext);
 	const [ email, setEmail ] = useState('');
 	const [ password, setPassword ] = useState('');
-
-	//button
 	const [ isActive, setIsActive ] = useState(true);
 
 	useEffect(() => {
@@ -37,7 +34,6 @@ export default function Login() {
 		})
 		.then(response => response.json())
 		.then(data => {
-			console.log(data)
 			if(data.accessToken !== undefined){
 				localStorage.setItem('accessToken', data.accessToken);
 				setUser({
@@ -48,7 +44,7 @@ export default function Login() {
 					icon: 'success',
 					text: 'Welcome to eKomersiyoNegosyo!'
 				})
-				//get user's details from the token
+
 				fetch('http://localhost:4000/users/details', {
 					headers:{
 						Authorization: `Bearer ${data.accessToken}`
@@ -56,8 +52,6 @@ export default function Login() {
 				})
 				.then(res => res.json())
 				.then(data => {
-					console.log(data)
-					
 					if(data.isAdmin === true){
 						localStorage.setItem('isAdmin', data.isAdmin)
 						setUser({

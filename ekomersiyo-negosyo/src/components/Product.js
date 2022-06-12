@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import { useState, useEffect, useContext } from 'react';
-import {Link, Navigate, useNavigate} from 'react-router-dom';
+import { useContext } from 'react';
+import {Link, useNavigate} from 'react-router-dom';
 import { ProductConsumer } from '../context';
 import  '../Products.css';
 import PropTypes from 'prop-types';
 import UserContext from '../UserContext';
 import Swal from 'sweetalert2';
-import AdminPage from '../pages/AdminPage';
 
 
 
@@ -14,8 +13,6 @@ export default function Product({productProp}){
   const {id, name, img, price, inCart} = productProp;
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
-  // const isAdmin = true;
-  
   return(
     <>
     <div>
@@ -53,7 +50,6 @@ export default function Product({productProp}){
                   navigate('/register')
                 }
               }
-                
                   }>
 
                     <Link to="/details">

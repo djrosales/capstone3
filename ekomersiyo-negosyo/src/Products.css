@@ -6,9 +6,6 @@
     box-sizing: border-box; 
     flex-wrap: wrap;
     border-radius: 5px;
-   
-    
-
 }
 .card{
     width:310px;
@@ -17,8 +14,6 @@
     border-radius: 5px;
     overflow: hidden;
     margin:40px 20px;
-
-    
 }
  .card-img-top{
      width:100%;
@@ -41,9 +36,6 @@
     font-weight: 500;
     font-size: 21px;
     margin-left: 0px;
-    /* padding-right: 5px; */
-    /* display: flex; */
-    /* justify-content: right; */
      display: block;
     cursor: pointer;
 

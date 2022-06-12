@@ -2,7 +2,6 @@ import { Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
 export default function ArchiveProduct({ product, isActive, fetchData}) {
-
 	const archiveToggle = (productId) => {
 		fetch(`http://localhost:4000/products/${ productId }/archive`,{
 			method: 'PUT',
@@ -29,8 +28,6 @@ export default function ArchiveProduct({ product, isActive, fetchData}) {
 			}
 		})
 	}
-
-	//for activating the product
 	const activateToggle = (productId) => {
 		fetch(`http://localhost:4000/products/${ productId }/activate`, {
 			method: 'PUT',
@@ -59,7 +56,6 @@ export default function ArchiveProduct({ product, isActive, fetchData}) {
 	}
 
 	return(
-
 		<>
 		<div className='text-center'>
 

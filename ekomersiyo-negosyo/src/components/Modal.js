@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {ProductConsumer} from '../context';
-import{BackButton, ButtonCart} from './Button';
+import{BackButton} from './Button';
 import{Link} from 'react-router-dom';
 
 
