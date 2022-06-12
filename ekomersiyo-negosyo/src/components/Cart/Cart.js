@@ -4,11 +4,13 @@ import EmptyCart from './EmptyCart';
 import {ProductConsumer} from '../../context';
 import CartList from './CartList';
 import CartTotals from './CartTotals';
+import { Component } from 'react';
 
 
 
 
- export default function Cart (){
+ export default class Cart extends Component {
+    render(){
     return(
         <section>
             <ProductConsumer>
@@ -20,7 +22,7 @@ import CartTotals from './CartTotals';
                             <Title prodName="your " label="cart"  />
                             <CartColumns />
                             <CartList value={value}/>
-                            <CartTotals value={value} />
+                            <CartTotals value={value} history={this.props.history}/>
                             </>
                         );
                     }
@@ -34,4 +36,5 @@ import CartTotals from './CartTotals';
         </section>
         
     )
+            }
 } 
