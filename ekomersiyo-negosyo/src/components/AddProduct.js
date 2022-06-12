@@ -15,7 +15,7 @@ export default function AddProduct({fetchData}) {
 	const addProduct = (e) => {
 		e.preventDefault();
 
-		fetch('http://localhost:4000/products/create', {
+		fetch('https://ekomersiyo-negosyo.herokuapp.com/products/create', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

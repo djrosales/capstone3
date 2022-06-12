@@ -16,7 +16,7 @@ export default function SpecificProduct() {
 
 	useEffect(() => {
 
-		fetch(`http://localhost:4000/products/${ productId }`)
+		fetch(`https://ekomersiyo-negosyo.herokuapp.com/products/${ productId }`)
 		.then(res => res.json())
 		.then(data => {
 			setName(data.name)
@@ -29,7 +29,7 @@ export default function SpecificProduct() {
 	const { user } = useContext(UserContext);
 	const order = (productId) => {
 
-		fetch('http://localhost:4000/orders/create', {
+		fetch('https://ekomersiyo-negosyo.herokuapp.com/orders/create', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

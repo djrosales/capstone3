@@ -29,7 +29,7 @@ export default function Registration() {
 	function registerUser(e) {
 		e.preventDefault();
 
-		fetch('http://localhost:4000/users/register', {
+		fetch('https://ekomersiyo-negosyo.herokuapp.com/users/register', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({

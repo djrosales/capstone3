@@ -24,7 +24,7 @@ export default function Login() {
 	function authentication(e) {
 		e.preventDefault();
 
-	fetch('http://localhost:4000/users/login', {
+	fetch('https://ekomersiyo-negosyo.herokuapp.com/users/login', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
@@ -45,7 +45,7 @@ export default function Login() {
 					text: 'Welcome to eKomersiyoNegosyo!'
 				})
 
-				fetch('http://localhost:4000/users/details', {
+				fetch('https://ekomersiyo-negosyo.herokuapp.com/users/details', {
 					headers:{
 						Authorization: `Bearer ${data.accessToken}`
 					}

@@ -10,7 +10,7 @@ export default function AdminPage() {
 
 	function getProducts() {
 		const token = localStorage.getItem('accessToken');
-			fetch('http://localhost:4000/products/all', {
+			fetch('https://ekomersiyo-negosyo.herokuapp.com/products/all', {
 				headers: {
 					Authorization: `Bearer ${token}`
 				}
